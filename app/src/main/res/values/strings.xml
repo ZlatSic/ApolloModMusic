@@ -170,6 +170,7 @@ https://github.com/CyanogenMod/android_packages_apps_Apollo/tree/cm-10.1
     <string name="tab_songs">Songs</string>
     <string name="tab_playlists">Playlists</string>
     <string name="tab_genres">Genres</string>
+    <string name="tab_download">Download</string>
     
     <!-- Visualizations -->
     <string name="visual_none">None</string>

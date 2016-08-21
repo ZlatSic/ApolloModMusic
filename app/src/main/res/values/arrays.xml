@@ -9,6 +9,7 @@
         <item>@string/tab_songs</item>
         <item>@string/tab_playlists</item>
         <item>@string/tab_genres</item>
+         <item>@string/tab_download</item>
     </string-array>
     
      <string-array name="visualization_types">
@@ -23,6 +24,6 @@
         <item>@string/widget_style_dark</item>
         <item>@string/widget_style_light</item>
     </string-array>
-     
+
 
 </resources>

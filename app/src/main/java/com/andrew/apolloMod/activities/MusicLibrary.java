@@ -25,6 +25,7 @@ import android.preference.PreferenceManager;
 import android.provider.BaseColumns;
 import android.provider.MediaStore.Audio;
 import android.provider.MediaStore.Audio.AudioColumns;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
@@ -231,6 +232,9 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
         // // Genres
         if(tabs_set.contains(getResources().getString(R.string.tab_genres)))
         	mPagerAdapter.addFragment(new GenresFragment());
+        // // Download
+        if(tabs_set.contains(getResources().getString(R.string.tab_download)))
+            mPagerAdapter.addFragment(new Fragment());
 
         // Initiate ViewPager
         ViewPager mViewPager = (ViewPager)findViewById(R.id.viewPager);
