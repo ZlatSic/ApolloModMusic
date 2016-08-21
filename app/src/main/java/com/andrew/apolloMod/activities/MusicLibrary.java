@@ -232,9 +232,6 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
         // // Genres
         if(tabs_set.contains(getResources().getString(R.string.tab_genres)))
         	mPagerAdapter.addFragment(new GenresFragment());
-        // // Download
-        if(tabs_set.contains(getResources().getString(R.string.tab_download)))
-            mPagerAdapter.addFragment(new Fragment());
 
         // Initiate ViewPager
         ViewPager mViewPager = (ViewPager)findViewById(R.id.viewPager);
@@ -296,6 +293,10 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 	        	shuffleAll();
 	            break;
 
+            case R.id.action_download_music:
+                downloadMusic();
+                break;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -318,6 +319,11 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 	    inflater.inflate(R.menu.actionbar_top, menu);
 	    return true;
 	}
+
+    public void downloadMusic(){
+        Intent i = new Intent(this, DownloadActivity.class);
+        startActivity(i);
+    }
 
 	/**
      * Shuffle all the tracks

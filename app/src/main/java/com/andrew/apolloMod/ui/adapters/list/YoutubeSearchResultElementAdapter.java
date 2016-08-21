@@ -1,8 +1,9 @@
-package com.andrew.apolloMod.ui.adapters;
+package com.andrew.apolloMod.ui.adapters.list;
 
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Environment;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.andrew.apolloMod.R;
 import com.bumptech.glide.Glide;
@@ -36,6 +38,7 @@ public class YoutubeSearchResultElementAdapter extends BaseAdapter{
     private static LayoutInflater inflater= null;
 
     public YoutubeSearchResultElementAdapter(Context c, List<Item> data){
+        super();
         inflater = (LayoutInflater)c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         context = c;
@@ -90,6 +93,8 @@ public class YoutubeSearchResultElementAdapter extends BaseAdapter{
             ServicePoint.downloadFileLink(i.getId().getVideoId()).enqueue(new Callback<String>() {
                 @Override
                 public void onResponse(Call<String> call, Response<String> response) {
+                    Toast.makeText(v.getContext(), "Downloading " + i.getSnippet().getTitle()+".mp3", Toast.LENGTH_SHORT);
+
                     String link = response.body();
 
                     Uri uri = Uri.parse(link);
@@ -108,6 +113,7 @@ public class YoutubeSearchResultElementAdapter extends BaseAdapter{
 
                 @Override
                 public void onFailure(Call<String> call, Throwable t) {
+                    Toast.makeText(v.getContext(), "Download failed. ", Toast.LENGTH_SHORT);
                 }
             });
 

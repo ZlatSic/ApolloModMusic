@@ -12,7 +12,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.andrew.apolloMod.R;
-import com.andrew.apolloMod.ui.adapters.YoutubeSearchResultElementAdapter;
+import com.andrew.apolloMod.ui.adapters.list.YoutubeSearchResultElementAdapter;
+import com.andrew.apolloMod.ui.fragments.base.ListViewFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -15,4 +15,7 @@
 	<item android:id="@+id/action_shuffle_all"
 		android:showAsAction="never"
 		android:title="@string/shuffle_all" />
+	<item android:id="@+id/action_download_music"
+		android:showAsAction="never"
+		android:title="@string/download_music"/>
 </menu>
