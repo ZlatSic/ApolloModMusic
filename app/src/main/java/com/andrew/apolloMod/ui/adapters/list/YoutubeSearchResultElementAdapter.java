@@ -93,7 +93,7 @@ public class YoutubeSearchResultElementAdapter extends BaseAdapter{
             ServicePoint.downloadFileLink(i.getId().getVideoId()).enqueue(new Callback<String>() {
                 @Override
                 public void onResponse(Call<String> call, Response<String> response) {
-                    Toast.makeText(v.getContext(), "Downloading " + i.getSnippet().getTitle()+".mp3", Toast.LENGTH_SHORT);
+                    Toast.makeText(v.getContext(), "Downloading " + i.getSnippet().getTitle()+".mp3", Toast.LENGTH_SHORT).show();
 
                     String link = response.body();
 
@@ -113,7 +113,7 @@ public class YoutubeSearchResultElementAdapter extends BaseAdapter{
 
                 @Override
                 public void onFailure(Call<String> call, Throwable t) {
-                    Toast.makeText(v.getContext(), "Download failed. ", Toast.LENGTH_SHORT);
+                    Toast.makeText(v.getContext(), "Download failed. ", Toast.LENGTH_SHORT).show();
                 }
             });
 
