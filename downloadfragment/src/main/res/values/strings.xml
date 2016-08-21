@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="download_music">Download music</string>
+    <string name="play_music">Play music</string>
+    <string name="search">Enter search query or video URL</string>
+    <string name="searchButtonText">Search</string>
+    <string name="sample_title">Sample title</string>
+    <string name="sample_description">Sample description of a given video. Probably will contain uploader name.</string>
+</resources>
