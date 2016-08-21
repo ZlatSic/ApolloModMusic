@@ -45,13 +45,13 @@
 		            android:id="@+id/bottomactionbar_new"
 		            android:layout_weight="1"
 					android:layout_width="match_parent"
-	           		android:layout_height="match_parent" />            		
+	           		android:layout_height="match_parent" />
 			</LinearLayout>
 	        <fragment android:name="com.andrew.apolloMod.ui.fragments.AudioPlayerFragment"
 	            android:id="@+id/audio_player_view"
 	            android:layout_weight="1"
 				android:layout_width="match_parent"
-	          	android:layout_height="match_parent" /> 
+	          	android:layout_height="match_parent" />
 	    </LinearLayout>
 	</com.sothree.slidinguppanel.SlidingUpPanelLayout>
 </RelativeLayout>

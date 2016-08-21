@@ -104,21 +104,17 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
             public void onPanelSlide(View panel, float slideOffset) {
                 if (slideOffset < 0.2) {
                     mBActionbar.onExpanded();
-                    if (getActionBar().isShowing()) {
-                        getActionBar().hide();
-                    }
                 } else {
                     mBActionbar.onCollapsed();
-                    if (!getActionBar().isShowing()) {
-                        getActionBar().show();
-                    }
                 }
             }
             @Override
             public void onPanelExpanded(View panel) {
+                getActionBar().hide();
             }
             @Override
             public void onPanelCollapsed(View panel) {
+                getActionBar().show();
             }
             @Override
             public void onPanelAnchored(View panel) {
